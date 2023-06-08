@@ -1,6 +1,7 @@
 package com.orgsnavegacao;
 
 import com.facebook.react.ReactActivity;
+import android.os.Bundle;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +12,13 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "orgsNavegacao";
+  }
+
+  /**
+   * adicionado de acordo com https://reactnavigation.org/docs/getting-started/
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 }
