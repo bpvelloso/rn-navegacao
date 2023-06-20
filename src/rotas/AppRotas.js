@@ -1,19 +1,18 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import Home from '../telas/Produtores/Home';
-import MelhoresProdutores from '../telas/Produtores/MelhoresProdutores';
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import Home from '../telas/Home';
+import MelhoresProdutores from '../telas/MelhoresProdutores';
+
+const Tab = createBottomTabNavigator();
 
 export default function AppRotas() {
-
-    const Tab = createBottomTabNavigator();
-
-    return  <NavigationContainer>
-                <Tab.Navigator>
-                    <Tab.Screen name="Home" component={Home}  />
-                    <Tab.Screen name="Melhores Produtores" component={MelhoresProdutores} />
-                </Tab.Navigator>
-            </NavigationContainer>
+    return <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name='Home' component={Home} />
+        <Tab.Screen name='Melhores Produtores' component={MelhoresProdutores} />
+      </Tab.Navigator>
+    </NavigationContainer>
 }
